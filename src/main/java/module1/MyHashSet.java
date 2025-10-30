@@ -17,8 +17,8 @@ public class MyHashSet<T> {
 
         while (currentNode != null){
             if (currentNode.nodeHash == hash &&
-                currentNode.nodeValue == value ||
-                currentNode.nodeValue.equals(value))
+                    (currentNode.nodeValue == value ||
+                            (value != null && value.equals(currentNode.nodeValue))))
             {
                 return false;
             }
@@ -42,9 +42,9 @@ public class MyHashSet<T> {
         Node<T> previousNode = null;
 
         while (currentNode != null){
-            if (currentNode.nodeHash == hash &&
-                currentNode.nodeValue == value ||
-                currentNode.nodeValue.equals(value))
+            if  (currentNode.nodeHash == hash &&
+                    (currentNode.nodeValue == value ||
+                            (value != null && value.equals(currentNode.nodeValue))))
             {
                 if (previousNode == null) {
                     elements[index] = currentNode.nextNode;
