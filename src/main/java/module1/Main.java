@@ -1,7 +1,4 @@
-package org.example;
-
-import module1.Book;
-import module1.Student;
+package module1;
 
 import java.util.ArrayList;
 import java.util.Comparator;
